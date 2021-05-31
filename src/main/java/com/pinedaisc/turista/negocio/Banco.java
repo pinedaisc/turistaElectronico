@@ -18,7 +18,7 @@ public class Banco {
 	
 	
 	/**
-	 * El banco paga 20,000 de sueldo al jugador que pase o caiga en la casilla de inicio
+	 * El banco paga 20,000 de sueldo al jugador que pase o caiga en la casilla de inicio  si no  es  por viaje sin escalas
 	 * @param jugador
 	 * @return
 	 */
