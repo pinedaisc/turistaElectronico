@@ -15,5 +15,17 @@ public class Banco {
 		}
 		return 0;
 	}
+	
+	
+	/**
+	 * El banco paga 20,000 de sueldo al jugador que pase o caiga en la casilla de inicio
+	 * @param jugador
+	 * @return
+	 */
+	public int sueldo(Jugador jugador) {
+		double balance = jugador.getBalance();
+		jugador.setBalance(balance + 2000);
+		return 0;
+	}
 
 }
