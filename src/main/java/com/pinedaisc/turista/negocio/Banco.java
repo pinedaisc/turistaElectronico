@@ -27,5 +27,29 @@ public class Banco {
 		jugador.setBalance(balance + 2000);
 		return 0;
 	}
+	
+	
+	public int entrarCarcel(Jugador j) {
+		j.setTurnosBloqueados(3);
+		j.setEncarcelado(true);
+		return 0;
+	}
+	
+	public int pagarCarcel(Jugador j) {
+		if(j.getBalance()-5000 < 0) {
+			System.out.println("No tiene suficiente dinero");
+			return -1;
+		}
+		j.setBalance(j.getBalance()-5000);
+		salirCarcel(j);
+		System.out.println("paga y sale de la cárcel");
+		return 0;
 
+	}
+	
+	public int salirCarcel(Jugador j) {
+		if(j.getTurnosBloqueados()<= 0)
+			j.setEncarcelado(false);
+		return 0;
+	}
 }
